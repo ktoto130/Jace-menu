@@ -51,34 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Contact Form Submission (Redirect to X)
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalHTML = submitBtn.innerHTML;
-            
-            submitBtn.innerHTML = 'Redirecting to X...';
-            submitBtn.disabled = true;
 
-            setTimeout(() => {
-                window.open('https://x.com/Drewboys', '_blank');
-                submitBtn.innerHTML = 'Redirected!';
-                submitBtn.classList.remove('bg-gradient-to-r', 'from-brand-accent', 'to-brand-violet');
-                submitBtn.classList.add('bg-emerald-500');
-                contactForm.reset();
-
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalHTML;
-                    submitBtn.classList.add('bg-gradient-to-r', 'from-brand-accent', 'to-brand-violet');
-                    submitBtn.classList.remove('bg-emerald-500');
-                    submitBtn.disabled = false;
-                }, 3000);
-            }, 1000);
-        });
-    }
 
     // GSAP ScrollTrigger Animations
     gsap.registerPlugin(ScrollTrigger);
