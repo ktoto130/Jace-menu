@@ -8,26 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let isMenuOpen = false;
 
     if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            isMenuOpen = !isMenuOpen;
-            
-            // Toggle menu animation
+        const toggleMenu = (open) => {
+            isMenuOpen = open;
             if (isMenuOpen) {
-                gsap.to(mobileMenu, {
-                    opacity: 1,
-                    y: 0,
-                    pointerEvents: 'auto',
-                    duration: 0.3,
-                    ease: 'power2.out'
-                });
+                mobileMenu.classList.remove('opacity-0', 'translate-y-[-20px]', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
             } else {
-                gsap.to(mobileMenu, {
-                    opacity: 0,
-                    y: -20,
-                    pointerEvents: 'none',
-                    duration: 0.3,
-                    ease: 'power2.in'
-                });
+                mobileMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                mobileMenu.classList.add('opacity-0', 'translate-y-[-20px]', 'pointer-events-none');
             }
 
             // Toggle hamburger icon between menu and close
@@ -36,25 +24,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 icon.setAttribute('data-lucide', isMenuOpen ? 'x' : 'menu');
                 lucide.createIcons(); // refresh icons
             }
+        };
+
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu(!isMenuOpen);
         });
 
         // Close mobile menu on clicking any navigation link
         const mobileLinks = document.querySelectorAll('.mobile-nav-link');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
-                isMenuOpen = false;
-                const icon = mobileMenuBtn.querySelector('i');
-                if (icon) {
-                    icon.setAttribute('data-lucide', 'menu');
-                    lucide.createIcons();
-                }
-                gsap.to(mobileMenu, {
-                    opacity: 0,
-                    y: -20,
-                    pointerEvents: 'none',
-                    duration: 0.2
-                });
+                toggleMenu(false);
             });
+        });
+
+        // Close menu if clicked outside
+        document.addEventListener('click', (e) => {
+            if (isMenuOpen && !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                toggleMenu(false);
+            }
         });
     }
 
