@@ -172,11 +172,11 @@
                     </div>
                     <div class="absolute -bottom-4 -left-4 bg-slate-900 border border-slate-700/80 rounded-2xl py-3 px-4 shadow-xl flex items-center gap-3 backdrop-blur-md transform -rotate-3 hover:rotate-0 transition-transform duration-300">
                         <div class="w-10 h-10 rounded-xl bg-brand-rose/20 flex items-center justify-center text-brand-rose">
-                            <i data-lucide="camera" class="w-5 h-5"></i>
+                            <i data-lucide="message-square" class="w-5 h-5"></i>
                         </div>
                         <div>
-                            <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Photography</p>
-                            <p class="text-xs font-bold text-white">Editorial Shot</p>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Interactive</p>
+                            <p class="text-xs font-bold text-white">Direct Chat</p>
                         </div>
                     </div>
                 </div>
@@ -198,7 +198,7 @@
                     <!-- Overlay Glass Card -->
                     <div class="absolute bottom-4 left-4 right-4 bg-slate-950/80 backdrop-blur-md border border-slate-800/80 p-5 rounded-2xl">
                         <p class="text-xs text-brand-accentLight font-semibold uppercase tracking-wider mb-1">Drew's Philosophy</p>
-                        <p class="text-sm text-slate-300 italic">"Every detail matters. The lighting, the angle, the grading – they all speak. I craft content that tells your story without saying a word."</p>
+                        <p class="text-sm text-slate-300 italic">"Every detail matters. The presentation, the editing, the grading – they all speak. I craft content that tells your story."</p>
                     </div>
                 </div>
             </div>
@@ -207,7 +207,7 @@
             <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
                 <div class="text-left">
                     <p class="text-xs text-brand-accent font-semibold tracking-widest uppercase mb-2">ABOUT THE CREATOR</p>
-                    <h2 class="text-3xl md:text-5xl font-bold font-sora text-white">Behind The Camera</h2>
+                    <h2 class="text-3xl md:text-5xl font-bold font-sora text-white">Behind The Content</h2>
                 </div>
                 
                 <p class="text-slate-400 leading-relaxed font-light">
@@ -273,13 +273,12 @@
                 <div class="flex flex-wrap items-center justify-center gap-3 pt-6">
                     <button class="filter-btn active px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded-full border border-brand-accent bg-brand-accent text-white transition-all duration-300" data-filter="all">All Works</button>
                     <button class="filter-btn px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded-full border border-slate-800 hover:border-slate-600 bg-brand-card/50 text-slate-400 hover:text-white transition-all duration-300" data-filter="video">Video</button>
-                    <button class="filter-btn px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded-full border border-slate-800 hover:border-slate-600 bg-brand-card/50 text-slate-400 hover:text-white transition-all duration-300" data-filter="photo">Photography</button>
                     <button class="filter-btn px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded-full border border-slate-800 hover:border-slate-600 bg-brand-card/50 text-slate-400 hover:text-white transition-all duration-300" data-filter="creative">Creative</button>
                 </div>
             </div>
 
             <!-- Portfolio Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8" id="portfolio-grid">
                 
                 <!-- Card 1 -->
                 <div class="portfolio-item group relative overflow-hidden rounded-3xl border border-slate-800/80 bg-brand-card/30 backdrop-blur-md shadow-lg transition-all duration-500 hover:border-brand-accent/30" data-category="video">
@@ -297,33 +296,12 @@
                     </div>
                     <div class="p-6">
                         <span class="text-xs text-brand-accent font-semibold tracking-wider uppercase">Video Direction</span>
-                        <h3 class="text-lg font-bold text-white font-sora mt-1 group-hover:text-brand-accentLight transition-colors">Chasing Horizons: Cinematic Travel Vlog</h3>
-                        <p class="text-sm text-slate-400 mt-2 font-light">Commercial travel film highlighting untouched landscapes and local culture.</p>
+                        <h3 class="text-lg font-bold text-white font-sora mt-1 group-hover:text-brand-accentLight transition-colors">Chasing Horizons: Cinematic Vlog</h3>
+                        <p class="text-sm text-slate-400 mt-2 font-light">Commercial film highlighting lifestyle landscapes and local culture.</p>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="portfolio-item group relative overflow-hidden rounded-3xl border border-slate-800/80 bg-brand-card/30 backdrop-blur-md shadow-lg transition-all duration-500 hover:border-brand-accent/30" data-category="photo">
-                    <div class="aspect-[16/10] overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800" 
-                             alt="Studio Photography" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent opacity-60"></div>
-                        <!-- Zoom Icon Float -->
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="w-14 h-14 rounded-full bg-brand-violet/90 text-white flex items-center justify-center shadow-lg shadow-brand-violet/40 transform scale-75 group-hover:scale-100 transition-transform duration-300">
-                                <i data-lucide="maximize-2" class="w-6 h-6"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs text-brand-violet font-semibold tracking-wider uppercase">Editorial Photography</span>
-                        <h3 class="text-lg font-bold text-white font-sora mt-1 group-hover:text-brand-violet transition-colors">Neon Shadows: Cyberpunk Editorial</h3>
-                        <p class="text-sm text-slate-400 mt-2 font-light">Studio portraiture experimenting with high-contrast colored lighting gels.</p>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
                 <div class="portfolio-item group relative overflow-hidden rounded-3xl border border-slate-800/80 bg-brand-card/30 backdrop-blur-md shadow-lg transition-all duration-500 hover:border-brand-accent/30" data-category="creative">
                     <div class="aspect-[16/10] overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" 
@@ -339,12 +317,12 @@
                     </div>
                     <div class="p-6">
                         <span class="text-xs text-brand-rose font-semibold tracking-wider uppercase">Creative Campaign</span>
-                        <h3 class="text-lg font-bold text-white font-sora mt-1 group-hover:text-brand-rose transition-colors">Construct: Urban Streetwear Campaign</h3>
-                        <p class="text-sm text-slate-400 mt-2 font-light">Creative direction, photography, and video assets for streetwear brand launch.</p>
+                        <h3 class="text-lg font-bold text-white font-sora mt-1 group-hover:text-brand-rose transition-colors">Urban Streetwear Campaign</h3>
+                        <p class="text-sm text-slate-400 mt-2 font-light">Creative direction, clips, and video assets for streetwear brand launch.</p>
                     </div>
                 </div>
 
-                <!-- Card 4 -->
+                <!-- Card 3 -->
                 <div class="portfolio-item group relative overflow-hidden rounded-3xl border border-slate-800/80 bg-brand-card/30 backdrop-blur-md shadow-lg transition-all duration-500 hover:border-brand-accent/30" data-category="video">
                     <div class="aspect-[16/10] overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&q=80&w=800" 
@@ -359,32 +337,12 @@
                     </div>
                     <div class="p-6">
                         <span class="text-xs text-brand-accent font-semibold tracking-wider uppercase">Content Creation</span>
-                        <h3 class="text-lg font-bold text-white font-sora mt-1 group-hover:text-brand-accentLight transition-colors">Behind the Design: Studio Desk Setup V3</h3>
-                        <p class="text-sm text-slate-400 mt-2 font-light">YouTube series exploring creative desk setups, ergonomics and tech workflows.</p>
+                        <h3 class="text-lg font-bold text-white font-sora mt-1 group-hover:text-brand-accentLight transition-colors">Behind the Design: Creative Studio V3</h3>
+                        <p class="text-sm text-slate-400 mt-2 font-light">Series exploring creative spaces, workspace design, and setups.</p>
                     </div>
                 </div>
 
-                <!-- Card 5 -->
-                <div class="portfolio-item group relative overflow-hidden rounded-3xl border border-slate-800/80 bg-brand-card/30 backdrop-blur-md shadow-lg transition-all duration-500 hover:border-brand-accent/30" data-category="photo">
-                    <div class="aspect-[16/10] overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=800" 
-                             alt="Landscape Photo" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent opacity-60"></div>
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="w-14 h-14 rounded-full bg-brand-violet/90 text-white flex items-center justify-center shadow-lg shadow-brand-violet/40 transform scale-75 group-hover:scale-100 transition-transform duration-300">
-                                <i data-lucide="maximize-2" class="w-6 h-6"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs text-brand-violet font-semibold tracking-wider uppercase">Landscape Photography</span>
-                        <h3 class="text-lg font-bold text-white font-sora mt-1 group-hover:text-brand-violet transition-colors">Echoes of Silence: Alpine Series</h3>
-                        <p class="text-sm text-slate-400 mt-2 font-light">Fine-art landscape photos capturing high-altitude peaks under moonlight.</p>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
+                <!-- Card 4 -->
                 <div class="portfolio-item group relative overflow-hidden rounded-3xl border border-slate-800/80 bg-brand-card/30 backdrop-blur-md shadow-lg transition-all duration-500 hover:border-brand-accent/30" data-category="creative">
                     <div class="aspect-[16/10] overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800" 
@@ -399,8 +357,8 @@
                     </div>
                     <div class="p-6">
                         <span class="text-xs text-brand-rose font-semibold tracking-wider uppercase">Brand Identity</span>
-                        <h3 class="text-lg font-bold text-white font-sora mt-1 group-hover:text-brand-rose transition-colors">Nova Tech: Futuristic Rebrand Assets</h3>
-                        <p class="text-sm text-slate-400 mt-2 font-light">Creative visual suite including dynamic product ads, banners, and socials.</p>
+                        <h3 class="text-lg font-bold text-white font-sora mt-1 group-hover:text-brand-rose transition-colors">Nova Tech: Futuristic Assets</h3>
+                        <p class="text-sm text-slate-400 mt-2 font-light">Creative visual suite including dynamic product clips, banners, and socials.</p>
                     </div>
                 </div>
 
@@ -487,7 +445,7 @@
                         <div class="mb-6">
                             <span class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Tier 1</span>
                             <h3 class="text-2xl font-bold font-sora text-white mt-1">Starter Access</h3>
-                            <p class="text-xs text-slate-400 font-light mt-1">Essential creative packs and standard videos.</p>
+                            <p class="text-xs text-slate-400 font-light mt-1">Essential creative clips and standard videos.</p>
                         </div>
                         
                         <!-- Price Tag -->
@@ -498,10 +456,9 @@
 
                         <!-- Feature List -->
                         <ul class="space-y-4 text-sm text-slate-300 mb-8">
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-accent shrink-0"></i>Premium Photo Sets</li>
                             <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-accent shrink-0"></i>Standard Creator Videos</li>
-                            <li class="flex items-center gap-3 text-slate-600"><i data-lucide="x" class="w-4 h-4 text-slate-700 shrink-0"></i>Extended Video Assets</li>
-                            <li class="flex items-center gap-3 text-slate-600"><i data-lucide="x" class="w-4 h-4 text-slate-700 shrink-0"></i>Themed Photoshoots</li>
+                            <li class="flex items-center gap-3 text-slate-600"><i data-lucide="x" class="w-4 h-4 text-slate-700 shrink-0"></i>Extended Video Clips</li>
+                            <li class="flex items-center gap-3 text-slate-600"><i data-lucide="x" class="w-4 h-4 text-slate-700 shrink-0"></i>Exclusive Visual Updates</li>
                             <li class="flex items-center gap-3 text-slate-600"><i data-lucide="x" class="w-4 h-4 text-slate-700 shrink-0"></i>Live Text Messaging Access</li>
                         </ul>
                     </div>
@@ -523,7 +480,7 @@
                         <div class="mb-6">
                             <span class="text-xs text-brand-accentLight uppercase tracking-widest font-bold">Tier 2</span>
                             <h3 class="text-2xl font-bold font-sora text-white mt-1">Deluxe Pack</h3>
-                            <p class="text-xs text-slate-400 font-light mt-1">Unlock premium photo sets and advanced content.</p>
+                            <p class="text-xs text-slate-400 font-light mt-1">Unlock standard clips and advanced content.</p>
                         </div>
                         
                         <!-- Price Tag -->
@@ -534,10 +491,9 @@
 
                         <!-- Feature List -->
                         <ul class="space-y-4 text-sm text-slate-300 mb-8">
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-accent shrink-0"></i>Premium Photo Sets</li>
                             <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-accent shrink-0"></i>Standard Creator Videos</li>
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-accent shrink-0"></i>Extended Video Assets</li>
-                            <li class="flex items-center gap-3 text-slate-600"><i data-lucide="x" class="w-4 h-4 text-slate-700 shrink-0"></i>Themed Photoshoots</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-accent shrink-0"></i>Extended Video Clips</li>
+                            <li class="flex items-center gap-3 text-slate-600"><i data-lucide="x" class="w-4 h-4 text-slate-700 shrink-0"></i>Exclusive Visual Updates</li>
                             <li class="flex items-center gap-3 text-slate-600"><i data-lucide="x" class="w-4 h-4 text-slate-700 shrink-0"></i>Live Text Messaging Access</li>
                         </ul>
                     </div>
@@ -565,10 +521,10 @@
 
                         <!-- Feature List -->
                         <ul class="space-y-4 text-sm text-slate-300 mb-8">
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-violet shrink-0"></i>Premium Photo Sets</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-violet shrink-0"></i>Standard Creator Videos</li>
                             <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-violet shrink-0"></i>Multiple Custom Videos</li>
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-violet shrink-0"></i>Extended Video Assets</li>
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-violet shrink-0"></i>Themed Photoshoot (Special Concepts)</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-violet shrink-0"></i>Extended Video Clips</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-violet shrink-0"></i>Exclusive Visual Updates</li>
                             <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-brand-violet shrink-0"></i>Direct Messaging 💬 (Live Chat)</li>
                         </ul>
                     </div>
