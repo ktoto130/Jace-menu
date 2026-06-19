@@ -2,50 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    let isMenuOpen = false;
 
-    if (mobileMenuBtn && mobileMenu) {
-        const toggleMenu = (open) => {
-            isMenuOpen = open;
-            if (isMenuOpen) {
-                mobileMenu.classList.remove('opacity-0', 'translate-y-[-20px]', 'pointer-events-none');
-                mobileMenu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
-            } else {
-                mobileMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
-                mobileMenu.classList.add('opacity-0', 'translate-y-[-20px]', 'pointer-events-none');
-            }
-
-            // Toggle hamburger icon between menu and close
-            const icon = mobileMenuBtn.querySelector('i, svg, [data-lucide]');
-            if (icon) {
-                icon.setAttribute('data-lucide', isMenuOpen ? 'x' : 'menu');
-                lucide.createIcons(); // refresh icons
-            }
-        };
-
-        mobileMenuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleMenu(!isMenuOpen);
-        });
-
-        // Close mobile menu on clicking any navigation link
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                toggleMenu(false);
-            });
-        });
-
-        // Close menu if clicked outside
-        document.addEventListener('click', (e) => {
-            if (isMenuOpen && !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                toggleMenu(false);
-            }
-        });
-    }
 
     // Header scroll background effect
     const header = document.querySelector('header');
