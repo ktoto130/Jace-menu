@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Contact Form Submission (Mock)
+    // Contact Form Submission (Redirect to X)
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -60,12 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalHTML = submitBtn.innerHTML;
             
-            // Simulating loading state
-            submitBtn.innerHTML = 'Sending...';
+            submitBtn.innerHTML = 'Redirecting to X...';
             submitBtn.disabled = true;
 
             setTimeout(() => {
-                submitBtn.innerHTML = 'Message Sent Successfully!';
+                window.open('https://x.com/Drewboys', '_blank');
+                submitBtn.innerHTML = 'Redirected!';
                 submitBtn.classList.remove('bg-gradient-to-r', 'from-brand-accent', 'to-brand-violet');
                 submitBtn.classList.add('bg-emerald-500');
                 contactForm.reset();
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     submitBtn.classList.remove('bg-emerald-500');
                     submitBtn.disabled = false;
                 }, 3000);
-            }, 1500);
+            }, 1000);
         });
     }
 
