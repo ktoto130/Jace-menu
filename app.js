@@ -181,22 +181,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: 'power2.out'
             });
 
-            // Specific grid/card reveals inside sections
+            // Specific grid/card reveals inside sections (triggered individually for each card)
             const cards = element.querySelectorAll('.service-card, .portfolio-item, .price-card');
-            if (cards.length > 0) {
-                gsap.from(cards, {
+            cards.forEach(card => {
+                gsap.from(card, {
                     scrollTrigger: {
-                        trigger: cards[0],
-                        start: 'top 85%',
+                        trigger: card,
+                        start: 'top 90%',
                         toggleActions: 'play none none none'
                     },
                     opacity: 0,
-                    y: 40,
-                    duration: 0.8,
-                    stagger: 0.15,
-                    ease: 'power3.out'
+                    y: 30,
+                    duration: 0.6,
+                    ease: 'power2.out'
                 });
-            }
+            });
         }
     });
 });
