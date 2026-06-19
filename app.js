@@ -11,28 +11,29 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuBtn.addEventListener('click', () => {
             isMenuOpen = !isMenuOpen;
             
+            // Toggle menu animation
+            if (isMenuOpen) {
+                gsap.to(mobileMenu, {
+                    opacity: 1,
+                    y: 0,
+                    pointerEvents: 'auto',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+            } else {
+                gsap.to(mobileMenu, {
+                    opacity: 0,
+                    y: -20,
+                    pointerEvents: 'none',
+                    duration: 0.3,
+                    ease: 'power2.in'
+                });
+            }
+
             // Toggle hamburger icon between menu and close
-            const icon = mobileMenuBtn.querySelector('i');
+            const icon = mobileMenuBtn.querySelector('i, svg, [data-lucide]');
             if (icon) {
-                if (isMenuOpen) {
-                    icon.setAttribute('data-lucide', 'x');
-                    gsap.to(mobileMenu, {
-                        opacity: 1,
-                        y: 0,
-                        pointerEvents: 'auto',
-                        duration: 0.3,
-                        ease: 'power2.out'
-                    });
-                } else {
-                    icon.setAttribute('data-lucide', 'menu');
-                    gsap.to(mobileMenu, {
-                        opacity: 0,
-                        y: -20,
-                        pointerEvents: 'none',
-                        duration: 0.3,
-                        ease: 'power2.in'
-                    });
-                }
+                icon.setAttribute('data-lucide', isMenuOpen ? 'x' : 'menu');
                 lucide.createIcons(); // refresh icons
             }
         });
